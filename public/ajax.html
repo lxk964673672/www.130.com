@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="'viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1, maxinmum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+<h1>ajax</h1>
+<script>
+    var url='/ajax.php'; //请求的接口地址
+    var xhr=new XMLHttpRequest();
+    xhr.open('GET','/ajax.php',true);
+    xhr.send();
+
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState===xhr.DONE){
+            if(xhr.status===200){
+                var data=xhr.responseText; //收到的响应数据 json 字符串
+                var obj=JSON.parse(data);
+                if(obj.errno==0)
+                {
+                    console.log(obj.data);
+                }else{
+                    console.log(obj.msg);
+                }
+            }else{
+                alert('There was a problem with the request.');
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

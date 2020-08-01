@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="'viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1, maxinmum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+<h1>Ajax</h1>
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script>
+    $.ajax({
+        url:"http://api.140.com/text.php",
+        type:"GET",
+        dataType:"json",
+        success:function(data)
+        {
+            console.log(data);
+            if(data.errno>0)
+            {
+                alert("出错了");
+            }else{
+                alert("ok");
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

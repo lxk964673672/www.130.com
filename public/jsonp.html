@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+   <title>JSONP</title>
+</head>
+<body>
+
+<h1>JSONP</h1>
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script>
+    $.ajax({
+        url:"http://api.140.com/test.php",
+        type:"get",
+        dataType:"jsonp", //请求方式为jsonp
+        jsonpCallback:"abc", //自定义回调函数名
+        success:function(data)
+        {
+            var result=JSON.stringify(data);//json对象转为字符串
+            if(data.errno>0){
+                alert(data.msg);
+            }else{
+                console.log(data.data)
+            }
+        }
+    });
+
+</script>
+<script>
+    var data=abc();
+    console.log(data);
+</script>
+</body>
+</html>

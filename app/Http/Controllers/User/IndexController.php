@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers\User;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class IndexController extends Controller
+{
+   public  function reg(){
+        return view('user.reg');
+   }
+
+    public  function login(){
+        return view('user.login');
+    }
+}
