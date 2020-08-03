@@ -33,6 +33,5 @@ Route::get('/pay','TestController@pay');
 
 Route::get('/goods','TestController@goods');
 
-Route::get('/oauth/github','OauthController@git');
+Route::get('/oauth/git','OauthController@git');
 
-Route::get('/oauth/githu22b','OauthController@gi22t');

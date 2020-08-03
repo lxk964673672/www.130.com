@@ -86,7 +86,7 @@
 
                 <div class="links">
 
-                    <a href="https://github.com/login/oauth/authorize?client_id=fcf31bc1e1e2ce69e967&redirect_uri=http://1911lxk.comcto.com/oauth/github">GitHub登录</a>
+                    <a href="https://github.com/login/oauth/authorize?client_id=fcf31bc1e1e2ce69e967&redirect_uri=http://www.130.com/oauth/git">GitHub登录</a>
                 </div>
             </div>
         </div>
